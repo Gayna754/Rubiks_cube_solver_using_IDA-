@@ -151,3 +151,14 @@ void line(GLfloat A[], GLfloat B[]) {
 
 //    glFlush();
 }
+
+void face(GLfloat A[], GLfloat B[], GLfloat C[], GLfloat D[]) {
+
+    glBegin(GL_POLYGON);
+    glVertex3fv(A);
+    glVertex3fv(B);
+    glVertex3fv(C);
+    glVertex3fv(D);
+    glEnd();
+
+}
