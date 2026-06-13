@@ -21,3 +21,12 @@
 
 #include <random>
 #include <ctime>
+
+std::atomic<bool> running(true);
+
+GLfloat T = 0;
+Cube cube;
+Cube displayCube;
+
+void userInputThread() {
+}
