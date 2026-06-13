@@ -120,3 +120,14 @@ void userInputThread() {
         }
     }
 }
+
+void spin() {
+
+    T += 0.5;
+
+    if (T > 360) {
+        T = 0;
+    }
+
+    glutPostRedisplay();
+}
