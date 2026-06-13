@@ -131,3 +131,10 @@ void spin() {
 
     glutPostRedisplay();
 }
+
+void initializeWindow() {
+    glClearColor(0, 0, 0, 1);
+    glColor3f(1, 0, 0);
+
+    glEnable(GL_DEPTH_TEST);
+}
