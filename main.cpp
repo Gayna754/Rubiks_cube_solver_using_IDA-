@@ -138,3 +138,16 @@ void initializeWindow() {
 
     glEnable(GL_DEPTH_TEST);
 }
+
+void line(GLfloat A[], GLfloat B[]) {
+
+//    glClear(GL_COLOR_BUFFER_BIT);
+    glLineWidth(3);
+
+    glBegin(GL_LINES);
+    glVertex3fv(A);
+    glVertex3fv(B);
+    glEnd();
+
+//    glFlush();
+}
