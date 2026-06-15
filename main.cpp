@@ -415,3 +415,37 @@ void draw() {
     glutSwapBuffers();
 }
 
+
+int main(int argC, char*argV[])
+{
+    cube.generateNewSolvedCube();
+    displayCube.generateNewSolvedCube();
+
+    std::cout << "Welcome!\n";
+    std::cout << "Type 'scramble' to scramble the cube\n";
+    std::cout << "Type 'solve' to solve the cube\n";
+    std::cout << "Enter commands to move the cube in the format 'white R'\n";
+
+    fflush(stdin);
+
+    std::thread inputThread(userInputThread);
+
+    glutInit(&argC, argV);
+
+    glutInitWindowPosition(250, 50);
+    glutInitWindowSize(600, 600);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
+    glutCreateWindow("Rubik's Cube");
+
+    initializeWindow();
+    glutDisplayFunc(draw);
+
+    glutIdleFunc(spin);
+
+    glutMainLoop();
+
+    running = false;
+    inputThread.join();
+
+    return 0;
+}
