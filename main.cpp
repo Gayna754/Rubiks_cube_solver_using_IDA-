@@ -8,10 +8,10 @@
 #define GL_SILENCE_DEPRECATION
 #include "include/glew.h"
 
-#include <OpenGL/gl.h>
+#include <GL/gl.h>
+#include <GL/glu.h>
 #include "include/glfw3.h"
-#include "GLUT/glut.h"
-#include "OpenGL/glu.h"
+#include <GL/freeglut.h> 
 
 #include <cstdlib>
 #include "Cube.h"
@@ -162,3 +162,56 @@ void face(GLfloat A[], GLfloat B[], GLfloat C[], GLfloat D[]) {
     glEnd();
 
 }
+
+
+void drawSide(GLfloat vertices[][3], int index) {
+
+    glColor3f(cube.sides[index].cornerPieces[0].colour.r, cube.sides[index].cornerPieces[0].colour.g, cube.sides[index].cornerPieces[0].colour.b);
+    face(vertices[0], vertices[1], vertices[5], vertices[4]);
+
+    glColor3f(cube.sides[index].edgePieces[0].colour.r, cube.sides[index].edgePieces[0].colour.g, cube.sides[index].edgePieces[0].colour.b);
+    face(vertices[1], vertices[2], vertices[6], vertices[5]);
+
+    glColor3f(cube.sides[index].cornerPieces[1].colour.r, cube.sides[index].cornerPieces[1].colour.g, cube.sides[index].cornerPieces[1].colour.b);
+    face(vertices[2], vertices[3], vertices[7], vertices[6]);
+
+    glColor3f(cube.sides[index].edgePieces[3].colour.r, cube.sides[index].edgePieces[3].colour.g, cube.sides[index].edgePieces[3].colour.b);
+    face(vertices[4], vertices[5], vertices[9], vertices[8]);
+
+    glColor3f(cube.sides[index].centrePiece.colour.r, cube.sides[index].centrePiece.colour.g, cube.sides[index].centrePiece.colour.b);
+    face(vertices[5], vertices[6], vertices[10], vertices[9]); // CENTRE
+
+    glColor3f(cube.sides[index].edgePieces[1].colour.r, cube.sides[index].edgePieces[1].colour.g, cube.sides[index].edgePieces[1].colour.b);
+    face(vertices[6], vertices[7], vertices[11], vertices[10]);
+
+    glColor3f(cube.sides[index].cornerPieces[3].colour.r, cube.sides[index].cornerPieces[3].colour.g, cube.sides[index].cornerPieces[3].colour.b);
+    face(vertices[8], vertices[9], vertices[13], vertices[12]);
+
+    glColor3f(cube.sides[index].edgePieces[2].colour.r, cube.sides[index].edgePieces[2].colour.g, cube.sides[index].edgePieces[2].colour.b);
+    face(vertices[9], vertices[10], vertices[14], vertices[13]);
+
+    glColor3f(cube.sides[index].cornerPieces[2].colour.r, cube.sides[index].cornerPieces[2].colour.g, cube.sides[index].cornerPieces[2].colour.b);
+    face(vertices[10], vertices[11], vertices[15], vertices[14]);
+
+    //Vertical
+    glColor3f(0, 0, 0);
+    line(vertices[1], vertices[13]);
+    glColor3f(0, 0, 0);
+    line(vertices[2], vertices[14]);
+    glColor3f(0, 0, 0);
+    line(vertices[0], vertices[12]);
+    glColor3f(0, 0, 0);
+    line(vertices[3], vertices[15]);
+
+    //Horizontal
+    glColor3f(0, 0, 0);
+    line(vertices[4], vertices[7]);
+    glColor3f(0, 0, 0);
+    line(vertices[8], vertices[11]);
+    glColor3f(0, 0, 0);
+    line(vertices[0], vertices[3]);
+    glColor3f(0, 0, 0);
+    line(vertices[12], vertices[15]);
+
+}
+
