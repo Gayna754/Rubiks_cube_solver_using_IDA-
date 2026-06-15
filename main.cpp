@@ -377,3 +377,41 @@ void draw() {
             {-0.45, -0.45, -0.15},
             {-0.45, -0.45, -0.45}
     };
+
+     GLfloat sideSixVertices[16][3] = {
+            {0.45, 0.45, -0.45},
+            {0.45, 0.45, -0.15},
+            {0.45, 0.45, 0.15},
+            {0.45, 0.45, 0.45},
+
+            {0.45, 0.15, -0.45},
+            {0.45, 0.15, -0.15},
+            {0.45, 0.15, 0.15},
+            {0.45, 0.15, 0.45},
+
+            {0.45, -0.15, -0.45},
+            {0.45, -0.15, -0.15},
+            {0.45, -0.15, 0.15},
+            {0.45, -0.15, 0.45},
+
+            {0.45, -0.45, -0.45},
+            {0.45, -0.45, -0.15},
+            {0.45, -0.45, 0.15},
+            {0.45, -0.45, 0.45}
+    };
+
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glLoadIdentity();
+    glRotatef(T, 0.2, 1, 0);
+
+    drawSide(sideOneVertices, 0);
+    drawSide(sideTwoVertices, 1);
+    drawSide(sideThreeVertices, 2);
+    drawSide(sideFourVertices, 3);
+    drawSide(sideFiveVertices, 4); //doubt
+    drawSide(sideSixVertices, 5); //doubt
+
+    glutSwapBuffers();
+}
+
