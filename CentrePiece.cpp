@@ -6,5 +6,5 @@
 
 CentrePiece::CentrePiece(Colour colourFront) {
     colour = colourFront;
-    
+    colours = {colourFront};
 }
