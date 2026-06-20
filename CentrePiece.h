@@ -13,7 +13,8 @@ public:
 
     CentrePiece() = default;
 
-    
+    CentrePiece(Colour colourFront);
+
 };
 
 
