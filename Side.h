@@ -12,7 +12,10 @@ class Side {
 public:
     Side() = default;
     std::vector <EdgePiece> edgePieces;
-    
+    std::vector <CornerPiece> cornerPieces;
+    CentrePiece centrePiece;
+
+    bool allSameColours();
 };
 
 
