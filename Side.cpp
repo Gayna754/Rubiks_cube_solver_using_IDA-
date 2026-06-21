@@ -7,4 +7,10 @@ bool Side::allSameColours() {
             return false;
         }
     }
+
+    for (auto cornerPiece: cornerPieces) {
+        if (cornerPiece.colour.colourName != centrePiece.colour.colourName) {
+            return false;
+        }
+    }
 }
