@@ -8,3 +8,7 @@ EdgePiece::EdgePiece(Colour colourFront, Colour colourSide) {
     colours = {colour, otherColour};
 }
 
+EdgePiece EdgePiece::flip() {
+    EdgePiece flipEdgePiece(this->otherColour, this->colour);
+    return flipEdgePiece;
+}
