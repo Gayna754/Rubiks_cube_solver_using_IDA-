@@ -12,7 +12,7 @@ class Colour {
 public:
     std::string colourName;
     std::vector <int> colourRepresentation;
-    float r, g, b;
+    float r, g, b,h;
 
     Colour(std::string colourName, std::vector<int> colourRepresentation);
 
