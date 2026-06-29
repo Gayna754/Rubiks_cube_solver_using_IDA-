@@ -10,8 +10,8 @@
 CornerPiece::CornerPiece(Colour colourFront, Colour colourTop, Colour colourSide) {
     colour = colourFront;
     topColour = colourTop;
-    sideColour = colourSide;
-    colours = {colour, topColour,sideColour};
+    sideColour =  colourSide;
+    colours = {colour, topColour, sideColour};
 }
 
 CornerPiece CornerPiece::top() {
