@@ -18,3 +18,8 @@ CornerPiece CornerPiece::top() {
     CornerPiece topCornerPiece(this->topColour, this->colour, this->sideColour);
     return topCornerPiece;
 }
+
+CornerPiece CornerPiece::side() {
+    CornerPiece sideCornerPiece(this->sideColour, this->topColour, this->colour);
+    return sideCornerPiece;
+}
