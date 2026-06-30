@@ -1,5 +1,5 @@
 
-
+#ifndef RUBIKS_CUBE_CORNERPIECE_H
 #define RUBIKS_CUBE_CORNERPIECE_H
 
 #include "iostream"
@@ -22,3 +22,6 @@ public:
 
     CornerPiece side();
 };
+
+
+#endif //RUBIKS_CUBE_CORNERPIECE_H
