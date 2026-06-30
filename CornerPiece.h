@@ -20,7 +20,7 @@ public:
 
     CornerPiece top();
 
-    
+    CornerPiece side();
 };
 
 
