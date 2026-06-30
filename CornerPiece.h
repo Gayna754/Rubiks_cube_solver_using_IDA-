@@ -1,4 +1,5 @@
 
+#define RUBIKS_CUBE_CORNERPIECE_H
 
 
 
