@@ -68,4 +68,19 @@ void Cube::F(Side &sideFacing) {
     int rightIndex = indexOfRight(sideFacing);
     int upIndex = indexOfUp(sideFacing);
     int leftIndex = indexOfLeft(sideFacing);
-    int downIndex = indexOfDown(sideFacing);}
+    int downIndex = indexOfDown(sideFacing);
+
+ if (sideFacing.centrePiece.colour.colourName == "red") { //wrong
+
+        std::vector<CornerPiece> upCorner = {sides[upIndex].cornerPieces[2], sides[upIndex].cornerPieces[3]};
+        EdgePiece upEdge = sides[upIndex].edgePieces[2];
+
+        std::vector<CornerPiece> rightCorner = {sides[rightIndex].cornerPieces[2], sides[rightIndex].cornerPieces[3]};
+        EdgePiece rightEdge = sides[rightIndex].edgePieces[2];
+
+        std::vector<CornerPiece> leftCorner = {sides[leftIndex].cornerPieces[2], sides[leftIndex].cornerPieces[3]};
+        EdgePiece leftEdge = sides[leftIndex].edgePieces[2];
+
+        std::vector<CornerPiece> downCorner = {sides[downIndex].cornerPieces[2], sides[downIndex].cornerPieces[3]};
+        EdgePiece downEdge = sides[downIndex].edgePieces[2];
+}
