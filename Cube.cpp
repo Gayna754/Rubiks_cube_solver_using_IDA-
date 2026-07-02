@@ -39,4 +39,11 @@ void Cube::R(Side &sideFacing) {
     int rightIndex = indexOfRight(sideFacing);
 
     F(sides[rightIndex]);
-}                               
+}                
+
+void Cube::L(Side &sideFacing) {
+
+    int leftIndex = indexOfLeft(sideFacing);
+
+    F(sides[leftIndex]);
+}
