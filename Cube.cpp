@@ -47,3 +47,17 @@ void Cube::L(Side &sideFacing) {
 
     F(sides[leftIndex]);
 }
+
+void Cube::D(Side &sideFacing) {
+
+    int downIndex = indexOfDown(sideFacing);
+
+    F(sides[downIndex]);
+}
+
+void Cube::B(Side &sideFacing) {
+
+    int oppIndex = indexOfOpposite(sideFacing);
+
+    F(sides[oppIndex]);
+}
