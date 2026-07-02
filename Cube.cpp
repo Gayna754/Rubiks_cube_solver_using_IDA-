@@ -61,3 +61,11 @@ void Cube::B(Side &sideFacing) {
 
     F(sides[oppIndex]);
 }
+
+void Cube::F(Side &sideFacing) {
+
+    int index = indexOfSide(sideFacing);
+    int rightIndex = indexOfRight(sideFacing);
+    int upIndex = indexOfUp(sideFacing);
+    int leftIndex = indexOfLeft(sideFacing);
+    int downIndex = indexOfDown(sideFacing);}
