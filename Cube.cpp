@@ -158,4 +158,10 @@ void Cube::F(Side &sideFacing) {
 
         std::vector<CornerPiece> upCorner = {sides[upIndex].cornerPieces[0], sides[upIndex].cornerPieces[3]};
         EdgePiece upEdge = sides[upIndex].edgePieces[3];
+
+        std::vector<CornerPiece> rightCorner = {sides[rightIndex].cornerPieces[0], sides[rightIndex].cornerPieces[3]};
+        EdgePiece rightEdge = sides[rightIndex].edgePieces[3];
+
+        std::vector<CornerPiece> leftCorner = {sides[leftIndex].cornerPieces[1], sides[leftIndex].cornerPieces[2]};
+        EdgePiece leftEdge = sides[leftIndex].edgePieces[1];
     }
