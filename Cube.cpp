@@ -207,4 +207,13 @@ void Cube::UI(Side &sideFacing) {
     int rightIndex = indexOfRight(sideFacing);
     int upIndex = indexOfUp(sideFacing);
     int leftIndex = indexOfLeft(sideFacing);
-    int oppIndex = indexOfOpposite(sideFacing);}
+    int oppIndex = indexOfOpposite(sideFacing);
+
+    if (sideFacing.centrePiece.colour.colourName == "orange") {
+
+        std::vector<CornerPiece> currCorner = {sides[index].cornerPieces[1], sides[index].cornerPieces[0]};
+        EdgePiece currEdge = sides[index].edgePieces[0];
+
+        std::vector<CornerPiece> rightCorner = {sides[rightIndex].cornerPieces[2], sides[rightIndex].cornerPieces[1]};
+        EdgePiece rightEdge = sides[rightIndex].edgePieces[1];
+}
