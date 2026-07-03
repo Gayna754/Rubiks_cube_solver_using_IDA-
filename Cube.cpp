@@ -126,7 +126,7 @@ void Cube::F(Side &sideFacing) {
         std::vector<CornerPiece> downCorner = {sides[downIndex].cornerPieces[1], sides[downIndex].cornerPieces[2]};
         EdgePiece downEdge = sides[downIndex].edgePieces[1];
 
-       std::vector<CornerPiece> currCorner;
+        std::vector<CornerPiece> currCorner;
         std::vector<EdgePiece> currEdge;
 
         for (int i = 0; i < sides[index].cornerPieces.size(); i++) {
@@ -153,8 +153,8 @@ void Cube::F(Side &sideFacing) {
         sides[index].cornerPieces = {currCorner[3], currCorner[0], currCorner[1], currCorner[2]};
         sides[index].edgePieces = {currEdge[3], currEdge[0], currEdge[1], currEdge[2]};
 
-    } 
-     else if (sideFacing.centrePiece.colour.colourName == "green") {
+    }
+    else if (sideFacing.centrePiece.colour.colourName == "green") {
 
         std::vector<CornerPiece> upCorner = {sides[upIndex].cornerPieces[0], sides[upIndex].cornerPieces[3]};
         EdgePiece upEdge = sides[upIndex].edgePieces[3];
@@ -196,3 +196,7 @@ void Cube::F(Side &sideFacing) {
         sides[index].edgePieces = {currEdge[3], currEdge[0], currEdge[1], currEdge[2]};
 
     }
+    else {
+        U(sides[downIndex]);
+    }
+}
