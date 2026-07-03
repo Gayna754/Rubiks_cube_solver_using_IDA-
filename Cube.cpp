@@ -200,3 +200,11 @@ void Cube::F(Side &sideFacing) {
         U(sides[downIndex]);
     }
 }
+
+void Cube::UI(Side &sideFacing) {
+
+    int index = indexOfSide(sideFacing);
+    int rightIndex = indexOfRight(sideFacing);
+    int upIndex = indexOfUp(sideFacing);
+    int leftIndex = indexOfLeft(sideFacing);
+    int oppIndex = indexOfOpposite(sideFacing);}
