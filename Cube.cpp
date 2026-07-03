@@ -153,5 +153,9 @@ void Cube::F(Side &sideFacing) {
         sides[index].cornerPieces = {currCorner[3], currCorner[0], currCorner[1], currCorner[2]};
         sides[index].edgePieces = {currEdge[3], currEdge[0], currEdge[1], currEdge[2]};
 
-    }
+    } 
+     else if (sideFacing.centrePiece.colour.colourName == "green") {
+
+        std::vector<CornerPiece> upCorner = {sides[upIndex].cornerPieces[0], sides[upIndex].cornerPieces[3]};
+        EdgePiece upEdge = sides[upIndex].edgePieces[3];
     }
