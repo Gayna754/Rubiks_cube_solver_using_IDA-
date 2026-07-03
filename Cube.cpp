@@ -179,4 +179,13 @@ void Cube::F(Side &sideFacing) {
         sides[upIndex].cornerPieces[0] = leftCorner[0];
         sides[upIndex].cornerPieces[3] = leftCorner[1];
         sides[upIndex].edgePieces[3] = leftEdge;
+
+        sides[downIndex].cornerPieces[0] = rightCorner[0];
+        sides[downIndex].cornerPieces[3] = rightCorner[1];
+        sides[downIndex].edgePieces[3] = rightEdge;
+
+        sides[leftIndex].cornerPieces[1] = downCorner[0];
+        sides[leftIndex].cornerPieces[2] = downCorner[1];
+        sides[leftIndex].edgePieces[1] = downEdge;
+
     }
