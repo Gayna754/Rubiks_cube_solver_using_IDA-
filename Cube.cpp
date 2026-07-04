@@ -234,4 +234,12 @@ void Cube::UI(Side &sideFacing) {
          sides[index].cornerPieces[0] = leftCorner[0];
         sides[index].cornerPieces[1] = leftCorner[1];
         sides[index].edgePieces[0] = leftEdge;
+
+         sides[rightIndex].cornerPieces[1] = currCorner[1];
+        sides[rightIndex].cornerPieces[2] = currCorner[0];
+        sides[rightIndex].edgePieces[1] = currEdge;
+
+        sides[oppIndex].cornerPieces[2] = rightCorner[1];
+        sides[oppIndex].cornerPieces[3] = rightCorner[0];
+        sides[oppIndex].edgePieces[2] = rightEdge;
 }
