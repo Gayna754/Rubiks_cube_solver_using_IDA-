@@ -249,4 +249,14 @@ void Cube::UI(Side &sideFacing) {
 
         sides[upIndex].cornerPieces = {upCorner[1], upCorner[2], upCorner[3], upCorner[0]};
         sides[upIndex].edgePieces = {upEdge[1], upEdge[2], upEdge[3], upEdge[0]};
+
+        }
+
+    else if (sideFacing.centrePiece.colour.colourName == "red") {
+
+        std::vector<CornerPiece> currCorner = {sides[index].cornerPieces[1], sides[index].cornerPieces[0]};
+        EdgePiece currEdge = sides[index].edgePieces[0];
+
+        std::vector<CornerPiece> rightCorner = {sides[rightIndex].cornerPieces[3], sides[rightIndex].cornerPieces[0]};
+        EdgePiece rightEdge = sides[rightIndex].edgePieces[3];
 }
