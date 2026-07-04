@@ -308,4 +308,7 @@ void Cube::UI(Side &sideFacing) {
         std::vector<CornerPiece> oppCorner = {sides[oppIndex].cornerPieces[0], sides[oppIndex].cornerPieces[1]};
         EdgePiece oppEdge = sides[oppIndex].edgePieces[0];
 
+        std::vector<CornerPiece> upCorner;
+        std::vector<EdgePiece> upEdge;
+
 }
