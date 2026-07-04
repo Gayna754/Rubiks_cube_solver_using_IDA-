@@ -311,4 +311,9 @@ void Cube::UI(Side &sideFacing) {
         std::vector<CornerPiece> upCorner;
         std::vector<EdgePiece> upEdge;
 
+        for (int i = 0; i < sides[upIndex].cornerPieces.size(); i++) {
+            upCorner.push_back(sides[upIndex].cornerPieces[i]);
+            upEdge.push_back(sides[upIndex].edgePieces[i]);
+        }
+
 }
