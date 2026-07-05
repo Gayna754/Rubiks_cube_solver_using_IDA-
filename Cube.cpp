@@ -231,11 +231,11 @@ void Cube::UI(Side &sideFacing) {
             upEdge.push_back(sides[upIndex].edgePieces[i]);
         }
 
-         sides[index].cornerPieces[0] = leftCorner[0];
+        sides[index].cornerPieces[0] = leftCorner[0];
         sides[index].cornerPieces[1] = leftCorner[1];
         sides[index].edgePieces[0] = leftEdge;
 
-         sides[rightIndex].cornerPieces[1] = currCorner[1];
+        sides[rightIndex].cornerPieces[1] = currCorner[1];
         sides[rightIndex].cornerPieces[2] = currCorner[0];
         sides[rightIndex].edgePieces[1] = currEdge;
 
@@ -243,14 +243,13 @@ void Cube::UI(Side &sideFacing) {
         sides[oppIndex].cornerPieces[3] = rightCorner[0];
         sides[oppIndex].edgePieces[2] = rightEdge;
 
-         sides[leftIndex].cornerPieces[0] = oppCorner[0];
+        sides[leftIndex].cornerPieces[0] = oppCorner[0];
         sides[leftIndex].cornerPieces[3] = oppCorner[1];
         sides[leftIndex].edgePieces[3] = oppEdge;
 
         sides[upIndex].cornerPieces = {upCorner[1], upCorner[2], upCorner[3], upCorner[0]};
         sides[upIndex].edgePieces = {upEdge[1], upEdge[2], upEdge[3], upEdge[0]};
-
-        }
+    }
 
     else if (sideFacing.centrePiece.colour.colourName == "red") {
 
@@ -282,7 +281,7 @@ void Cube::UI(Side &sideFacing) {
         sides[rightIndex].cornerPieces[0] = currCorner[0];
         sides[rightIndex].edgePieces[3] = currEdge;
 
-         sides[oppIndex].cornerPieces[2] = rightCorner[0];
+        sides[oppIndex].cornerPieces[2] = rightCorner[0];
         sides[oppIndex].cornerPieces[3] = rightCorner[1];
         sides[oppIndex].edgePieces[2] = rightEdge;
 
@@ -290,11 +289,10 @@ void Cube::UI(Side &sideFacing) {
         sides[leftIndex].cornerPieces[2] = oppCorner[1];
         sides[leftIndex].edgePieces[1] = oppEdge;
 
-         sides[upIndex].cornerPieces = {upCorner[1], upCorner[2], upCorner[3], upCorner[0]};
+        sides[upIndex].cornerPieces = {upCorner[1], upCorner[2], upCorner[3], upCorner[0]};
         sides[upIndex].edgePieces = {upEdge[1], upEdge[2], upEdge[3], upEdge[0]};
-
-        
     }
+
     else {
         std::vector<CornerPiece> currCorner = {sides[index].cornerPieces[0], sides[index].cornerPieces[1]};
         EdgePiece currEdge = sides[index].edgePieces[0];
@@ -311,12 +309,14 @@ void Cube::UI(Side &sideFacing) {
         std::vector<CornerPiece> upCorner;
         std::vector<EdgePiece> upEdge;
 
+
         for (int i = 0; i < sides[upIndex].cornerPieces.size(); i++) {
             upCorner.push_back(sides[upIndex].cornerPieces[i]);
             upEdge.push_back(sides[upIndex].edgePieces[i]);
         }
 
-         sides[index].cornerPieces[0] = leftCorner[0];
+
+        sides[index].cornerPieces[0] = leftCorner[0];
         sides[index].cornerPieces[1] = leftCorner[1];
         sides[index].edgePieces[0] = leftEdge;
 
@@ -332,5 +332,8 @@ void Cube::UI(Side &sideFacing) {
         sides[leftIndex].cornerPieces[1] = oppCorner[1];
         sides[leftIndex].edgePieces[0] = oppEdge;
 
+        sides[upIndex].cornerPieces = {upCorner[1], upCorner[2], upCorner[3], upCorner[0]};
+        sides[upIndex].edgePieces = {upEdge[1], upEdge[2], upEdge[3], upEdge[0]};
+    }
 
 }
