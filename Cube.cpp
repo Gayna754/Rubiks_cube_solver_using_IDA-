@@ -338,3 +338,16 @@ void Cube::UI(Side &sideFacing) {
 
 }
 
+int Cube::indexOfSide(Side &sideToBeFound) {
+
+    int index = 0;
+
+    for (auto side : sides) {
+
+            if (sideToBeFound.centrePiece.colour.colourName == side.centrePiece.colour.colourName) {
+                return index;
+            }
+
+        index++;
+    }
+
