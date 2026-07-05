@@ -350,4 +350,8 @@ int Cube::indexOfSide(Side &sideToBeFound) {
 
         index++;
     }
+      std::cout << "Index of side not correctly found in Cube.cpp\n";
+
+    return index;
+}
 
