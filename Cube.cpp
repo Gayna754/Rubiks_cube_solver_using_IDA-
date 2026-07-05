@@ -372,4 +372,23 @@ int Cube::indexOfRight(Side &sideToBeFound) {
         return 0;
     }
 }
+int Cube::indexOfLeft(Side &sideToBeFound) {
+
+    if (sideToBeFound.centrePiece.colour.colourName == "white"
+        || sideToBeFound.centrePiece.colour.colourName == "orange"
+        || sideToBeFound.centrePiece.colour.colourName == "red") {
+        return 5;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "yellow") {
+        return 4;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "blue") {
+        return 0;
+    }
+    else {
+        return 2;
+    }
+
+//    return indexOfRight(sides[indexOfRight(sides[indexOfRight(sideToBeFound)])]); // goes right 3 times
+}
 
