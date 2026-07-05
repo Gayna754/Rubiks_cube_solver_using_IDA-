@@ -366,7 +366,7 @@ int Cube::indexOfRight(Side &sideToBeFound) {
         return 5;
     }
     else if (sideToBeFound.centrePiece.colour.colourName == "blue") {
-        return 1;
+        return 2;
     }
     else {
         return 0;
