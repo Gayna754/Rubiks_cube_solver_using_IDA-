@@ -355,3 +355,21 @@ int Cube::indexOfSide(Side &sideToBeFound) {
     return index;
 }
 
+int Cube::indexOfRight(Side &sideToBeFound) {
+
+    if (sideToBeFound.centrePiece.colour.colourName == "white"
+        || sideToBeFound.centrePiece.colour.colourName == "orange"
+        || sideToBeFound.centrePiece.colour.colourName == "red") {
+        return 4;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "yellow") {
+        return 5;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "blue") {
+        return 2;
+    }
+    else {
+        return 0;
+    }
+}
+
