@@ -423,3 +423,25 @@ int Cube::indexOfDown(Side &sideToBeFound) {
     }
 }
 
+int Cube::indexOfOpposite(Side &sideToBeFound) {
+
+    if (sideToBeFound.centrePiece.colour.colourName == "white") {
+        return 2;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "yellow") {
+        return 0;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "green") {
+        return 4;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "blue") {
+        return 5;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "orange") {
+        return 3;
+    }
+    else {
+        return 1;
+    }
+}
+
