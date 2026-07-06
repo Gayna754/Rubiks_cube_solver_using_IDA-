@@ -531,3 +531,64 @@ bool Cube::solved() {
     }
     return true;
 }
+
+bool Cube::whiteLayerSolved() {
+
+    if (!sides[0].allSameColours()) {
+        return false;
+    }
+
+    if (!(sides[0].cornerPieces[0].topColour.colourName == "orange" &&
+          sides[0].cornerPieces[0].sideColour.colourName == "green")) {
+        return false;
+    }
+
+    if (!(sides[0].cornerPieces[1].topColour.colourName == "orange" &&
+          sides[0].cornerPieces[1].sideColour.colourName == "blue")) {
+        return false;
+    }
+
+    if (!(sides[0].cornerPieces[2].topColour.colourName == "red" &&
+          sides[0].cornerPieces[2].sideColour.colourName == "blue")) {
+        return false;
+    }
+
+    if (!(sides[0].cornerPieces[3].topColour.colourName == "red" &&
+          sides[0].cornerPieces[3].sideColour.colourName == "green")) {
+        return false;
+    }
+
+    if (!(sides[0].edgePieces[0].otherColour.colourName == "orange" &&
+          sides[0].edgePieces[1].otherColour.colourName == "blue" &&
+          sides[0].edgePieces[2].otherColour.colourName == "red" &&
+          sides[0].edgePieces[3].otherColour.colourName == "green")) {
+        return false;
+    }
+
+    return true;
+}
+
+bool Cube::secondLayerSolved() {
+
+    if (!(sides[1].edgePieces[1].colour.colourName == "orange" &&
+          sides[1].edgePieces[3].colour.colourName == "orange")) {
+        return false;
+    }
+
+    if (!(sides[3].edgePieces[1].colour.colourName == "red" &&
+          sides[3].edgePieces[3].colour.colourName == "red")) {
+        return false;
+    }
+
+    if (!(sides[4].edgePieces[1].colour.colourName == "blue" &&
+          sides[4].edgePieces[3].colour.colourName == "blue")) {
+        return false;
+    }
+
+    if (!(sides[5].edgePieces[1].colour.colourName == "green" &&
+          sides[5].edgePieces[3].colour.colourName == "green")) {
+        return false;
+    }
+
+    return true;
+}
