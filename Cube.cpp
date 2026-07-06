@@ -609,3 +609,10 @@ bool Cube::isYellowCross() {
     return true;
 
 }
+
+void Cube::makeYellowCross() {
+
+    if (isYellowCross()) {
+        return;
+    }
+}
