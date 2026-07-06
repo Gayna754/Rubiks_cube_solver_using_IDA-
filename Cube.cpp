@@ -393,3 +393,17 @@ int Cube::indexOfLeft(Side &sideToBeFound) {
 
 //    return indexOfRight(sides[indexOfRight(sides[indexOfRight(sideToBeFound)])]); // goes right 3 times
 }
+
+int Cube::indexOfUp(Side &sideToBeFound) {
+
+    if (sideToBeFound.centrePiece.colour.colourName == "orange") {
+        return 2;
+    }
+    else if (sideToBeFound.centrePiece.colour.colourName == "red") {
+        return 0;
+    }
+    else {
+        return 1;
+    }
+}
+
