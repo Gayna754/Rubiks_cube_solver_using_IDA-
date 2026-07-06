@@ -350,7 +350,8 @@ int Cube::indexOfSide(Side &sideToBeFound) {
 
         index++;
     }
-      std::cout << "Index of side not correctly found in Cube.cpp\n";
+
+    std::cout << "Index of side not correctly found in Cube.cpp\n";
 
     return index;
 }
@@ -372,6 +373,7 @@ int Cube::indexOfRight(Side &sideToBeFound) {
         return 0;
     }
 }
+
 int Cube::indexOfLeft(Side &sideToBeFound) {
 
     if (sideToBeFound.centrePiece.colour.colourName == "white"
@@ -391,4 +393,3 @@ int Cube::indexOfLeft(Side &sideToBeFound) {
 
 //    return indexOfRight(sides[indexOfRight(sides[indexOfRight(sideToBeFound)])]); // goes right 3 times
 }
-
