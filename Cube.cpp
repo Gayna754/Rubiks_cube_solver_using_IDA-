@@ -445,3 +445,21 @@ int Cube::indexOfOpposite(Side &sideToBeFound) {
     }
 }
 
+void Cube::generateNewSolvedCube() {
+
+    Side sideOne;
+    Side sideTwo;
+    Side sideThree;
+    Side sideFour;
+    Side sideFive;
+    Side sideSix;
+
+    // Centre Pieces
+    CentrePiece sideOneCentre(white);
+    CentrePiece sideTwoCentre(orange);
+    CentrePiece sideThreeCentre(yellow);
+    CentrePiece sideFourCentre(red);
+    CentrePiece sideFiveCentre(blue);
+    CentrePiece sideSixCentre(green);
+}
+
