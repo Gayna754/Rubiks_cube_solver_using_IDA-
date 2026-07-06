@@ -592,3 +592,20 @@ bool Cube::secondLayerSolved() {
 
     return true;
 }
+
+bool Cube::isYellowCross() {
+
+    if (!(whiteLayerSolved() and secondLayerSolved())) {
+        return false;
+    }
+
+    if (!(sides[2].edgePieces[0].colour.colourName == "yellow" &&
+            sides[2].edgePieces[1].colour.colourName == "yellow" &&
+            sides[2].edgePieces[2].colour.colourName == "yellow" &&
+            sides[2].edgePieces[3].colour.colourName == "yellow")) {
+        return false;
+    }
+
+    return true;
+
+}
