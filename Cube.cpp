@@ -463,3 +463,90 @@ void Cube::generateNewSolvedCube() {
     CentrePiece sideSixCentre(green);
 }
 
+void Cube::generateNewSolvedCube() {
+
+    Side sideOne;
+    Side sideTwo;
+    Side sideThree;
+    Side sideFour;
+    Side sideFive;
+    Side sideSix;
+
+    // Centre Pieces
+    CentrePiece sideOneCentre(white);
+    CentrePiece sideTwoCentre(orange);
+    CentrePiece sideThreeCentre(yellow);
+    CentrePiece sideFourCentre(red);
+    CentrePiece sideFiveCentre(blue);
+    CentrePiece sideSixCentre(green);
+
+    // Edge Pieces
+    EdgePiece sideOneEdgeOne(white, orange);
+    EdgePiece sideOneEdgeTwo(white, blue);
+    EdgePiece sideOneEdgeThree(white, red);
+    EdgePiece sideOneEdgeFour(white, green);
+
+    EdgePiece sideThreeEdgeOne(yellow, orange);
+    EdgePiece sideThreeEdgeTwo(yellow, green);
+    EdgePiece sideThreeEdgeThree(yellow, red);
+    EdgePiece sideThreeEdgeFour(yellow, blue);
+
+    EdgePiece sideTwoEdgeLeft(orange, green);
+    EdgePiece sideTwoEdgeRight(orange, blue);
+
+    EdgePiece sideFourEdgeLeft(red, green);
+    EdgePiece sideFourEdgeRight(red, blue);
+
+    // Corner Pieces
+    CornerPiece sideOneCornerOne(white, orange, green); //front, top/bottom, left/right
+    CornerPiece sideOneCornerTwo(white, orange, blue);
+    CornerPiece sideOneCornerThree(white, red, blue);
+    CornerPiece sideOneCornerFour(white, red, green); //green on left
+
+    CornerPiece sideThreeCornerOne(yellow, orange, blue);
+    CornerPiece sideThreeCornerTwo(yellow, orange, green);
+    CornerPiece sideThreeCornerThree(yellow, red, green);
+    CornerPiece sideThreeCornerFour(yellow, red, blue);
+
+    // White
+    sideOne.centrePiece = sideOneCentre;
+    sideOne.edgePieces = {sideOneEdgeOne, sideOneEdgeTwo, sideOneEdgeThree, sideOneEdgeFour};
+    sideOne.cornerPieces = {sideOneCornerOne, sideOneCornerTwo, sideOneCornerThree, sideOneCornerFour};
+
+    // Orange
+    sideTwo.centrePiece = sideTwoCentre;
+    sideTwo.edgePieces = {sideThreeEdgeOne.flip(), sideTwoEdgeRight, sideOneEdgeOne.flip(), sideTwoEdgeLeft};
+    sideTwo.cornerPieces = {sideThreeCornerOne.top(), sideThreeCornerTwo.top(), sideOneCornerTwo.top(), sideOneCornerOne.top()};
+
+    // Yellow
+    sideThree.centrePiece = sideThreeCentre;
+    sideThree.edgePieces = {sideThreeEdgeOne, sideThreeEdgeTwo, sideThreeEdgeThree, sideThreeEdgeFour};
+    sideThree.cornerPieces = {sideThreeCornerOne, sideThreeCornerTwo, sideThreeCornerThree, sideThreeCornerFour};
+
+    // Red
+    sideFour.centrePiece = sideFourCentre;
+    sideFour.edgePieces = {sideOneEdgeThree.flip(), sideFourEdgeRight, sideThreeEdgeThree.flip(), sideFourEdgeLeft};
+    sideFour.cornerPieces = {sideOneCornerFour.top(), sideOneCornerThree.top(), sideThreeCornerFour.top(), sideThreeCornerThree.top()};
+
+    // Blue
+    sideFive.centrePiece = sideFiveCentre;
+    sideFive.edgePieces = {sideTwoEdgeRight.flip(), sideThreeEdgeFour.flip(), sideFourEdgeRight.flip(), sideOneEdgeTwo.flip()};
+    sideFive.cornerPieces = {sideOneCornerTwo.side(), sideThreeCornerOne.side(), sideThreeCornerFour.side(), sideOneCornerThree.side()};
+
+    // Green
+    sideSix.centrePiece = sideSixCentre;
+    sideSix.edgePieces = {sideTwoEdgeLeft.flip(), sideOneEdgeFour.flip(), sideFourEdgeLeft.flip(), sideThreeEdgeTwo.flip()};
+    sideSix.cornerPieces = {sideThreeCornerTwo.side(), sideOneCornerOne.side(), sideOneCornerFour.side(), sideThreeCornerThree.side()};
+
+    sides = {sideOne, sideTwo, sideThree, sideFour, sideFive, sideSix};
+}
+
+bool Cube::solved() {
+    for (auto side: sides) {
+        if (!side.allSameColours()) {
+            return false;
+        }
+    }
+    return true;
+}
+
