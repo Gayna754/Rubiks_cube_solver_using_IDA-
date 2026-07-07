@@ -667,3 +667,9 @@ void Cube::makeYellowCross() {
 
         return;
     }
+
+    if (sides[2].edgePieces[0].colour.colourName == "yellow" &&
+        sides[2].edgePieces[1].colour.colourName == "yellow") {
+
+        UI(sides[3]);
+    }
