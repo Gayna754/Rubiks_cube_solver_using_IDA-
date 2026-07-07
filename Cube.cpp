@@ -701,3 +701,17 @@ void Cube::solveFinalLayer() {
 
         UI(sides[1]);
     }
+
+    while (!(sides[1].edgePieces[0].colour.colourName == "orange" &&
+            sides[3].edgePieces[2].colour.colourName == "red" &&
+            sides[4].edgePieces[1].colour.colourName == "blue" &&
+            sides[5].edgePieces[3].colour.colourName == "green")) {
+
+        F(sides[1]);
+        R(sides[1]);
+        U(sides[1]);
+        RI(sides[1]);
+        UI(sides[1]);
+        FI(sides[1]);
+    }
+}
