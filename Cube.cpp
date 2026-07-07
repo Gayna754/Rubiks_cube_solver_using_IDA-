@@ -694,3 +694,10 @@ void Cube::makeYellowCross() {
     UI(sides[3]);
     FI(sides[3]);
 }
+
+void Cube::solveFinalLayer() {
+
+    while (sides[1].edgePieces[0].colour.colourName != "orange") {
+
+        UI(sides[1]);
+    }
