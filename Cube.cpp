@@ -615,4 +615,15 @@ void Cube::makeYellowCross() {
     if (isYellowCross()) {
         return;
     }
-}
+
+    if (sides[2].edgePieces[0].colour.colourName != "yellow" &&
+          sides[2].edgePieces[1].colour.colourName != "yellow" &&
+          sides[2].edgePieces[2].colour.colourName != "yellow" &&
+          sides[2].edgePieces[3].colour.colourName != "yellow") {
+
+        F(sides[3]);
+        R(sides[3]);
+        U(sides[3]);
+        RI(sides[3]);
+        UI(sides[3]);
+        FI(sides[3]);}
