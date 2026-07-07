@@ -629,4 +629,11 @@ void Cube::makeYellowCross() {
         FI(sides[3]);
         
         UI(sides[3]);
-        UI(sides[3]);}
+        UI(sides[3]);
+    
+        F(sides[3]);
+        R(sides[3]);
+        U(sides[3]);
+        RI(sides[3]);
+        UI(sides[3]);
+        FI(sides[3]);}
