@@ -723,3 +723,11 @@ void Cube::U(Side &sideFacing) {
     UI(sideFacing);
 
 }
+
+void Cube::RI(Side &sideFacing) {
+
+    R(sideFacing);
+    R(sideFacing);
+    R(sideFacing);
+
+}
