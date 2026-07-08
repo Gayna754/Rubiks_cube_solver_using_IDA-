@@ -782,4 +782,10 @@ std::random_device rd;
 
         if (possibleMoves[randomIndex] == "UI") {
             UI(sides[0]);
+        }
+     else if (possibleMoves[randomIndex] == "DI") {
+            DI(sides[0]);
+        }
+        else if (possibleMoves[randomIndex] == "RI") {
+            RI(sides[0]);
         }}
