@@ -755,3 +755,11 @@ void Cube::DI(Side &sideFacing) {
     D(sideFacing);
 
 }
+
+void Cube::FI(Side &sideFacing) {
+
+    F(sideFacing);
+    F(sideFacing);
+    F(sideFacing);
+
+}
