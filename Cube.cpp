@@ -715,3 +715,11 @@ void Cube::solveFinalLayer() {
         FI(sides[1]);
     }
 }
+
+void Cube::U(Side &sideFacing) {
+
+    UI(sideFacing);
+    UI(sideFacing);
+    UI(sideFacing);
+
+}
