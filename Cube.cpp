@@ -794,4 +794,17 @@ std::random_device rd;
         }
         else if (possibleMoves[randomIndex] == "FI") {
             FI(sides[0]);
+        }
+    else if (possibleMoves[randomIndex] == "BI") {
+            BI(sides[0]);
+        }
+
+        else if (possibleMoves[randomIndex] == "U") {
+            U(sides[0]);
+        }
+        else if (possibleMoves[randomIndex] == "D") {
+            D(sides[0]);
+        }
+        else if (possibleMoves[randomIndex] == "R") {
+            R(sides[0]);
         }}
