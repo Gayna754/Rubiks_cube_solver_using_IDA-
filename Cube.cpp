@@ -816,4 +816,11 @@ std::random_device rd;
         }
         else if (possibleMoves[randomIndex] == "B") {
             B(sides[0]);
-        }}
+        }
+        else {
+            std::cout << "Invalid\n";
+        }
+    }
+
+    std::cout << "Scrambled!\n";
+}
