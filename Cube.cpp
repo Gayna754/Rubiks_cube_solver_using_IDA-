@@ -739,3 +739,11 @@ void Cube::LI(Side &sideFacing) {
     L(sideFacing);
 
 }
+
+void Cube::BI(Side &sideFacing) {
+
+    B(sideFacing);
+    B(sideFacing);
+    B(sideFacing);
+
+}
