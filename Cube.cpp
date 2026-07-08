@@ -807,4 +807,13 @@ std::random_device rd;
         }
         else if (possibleMoves[randomIndex] == "R") {
             R(sides[0]);
+        }
+    else if (possibleMoves[randomIndex] == "L") {
+            L(sides[0]);
+        }
+        else if (possibleMoves[randomIndex] == "F") {
+            F(sides[0]);
+        }
+        else if (possibleMoves[randomIndex] == "B") {
+            B(sides[0]);
         }}
