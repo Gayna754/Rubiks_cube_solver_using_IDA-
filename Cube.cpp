@@ -763,3 +763,12 @@ void Cube::FI(Side &sideFacing) {
     F(sideFacing);
 
 }
+
+void Cube::scramble(int numOfScrambleMoves) {
+
+    std::srand(std::time(nullptr));
+
+    std::string possibleMoves[] = {"U", "UI", "D", "DI", "F", "FI", "B", "BI", "R", "RI",
+                                   "L", "LI"};
+
+    int arraySize = sizeof(possibleMoves) / sizeof(possibleMoves[0]);}
