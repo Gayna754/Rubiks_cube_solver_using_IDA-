@@ -771,4 +771,15 @@ void Cube::scramble(int numOfScrambleMoves) {
     std::string possibleMoves[] = {"U", "UI", "D", "DI", "F", "FI", "B", "BI", "R", "RI",
                                    "L", "LI"};
 
-    int arraySize = sizeof(possibleMoves) / sizeof(possibleMoves[0]);}
+    int arraySize = sizeof(possibleMoves) / sizeof(possibleMoves[0]);
+
+std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(0, arraySize - 1);
+
+    for (int i = 0; i < numOfScrambleMoves; ++i) {
+        int randomIndex = dis(gen);
+
+        if (possibleMoves[randomIndex] == "UI") {
+            UI(sides[0]);
+        }}
