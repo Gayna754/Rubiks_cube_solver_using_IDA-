@@ -844,4 +844,13 @@ void Cube::doMove(std::string move) {
     }
     else if (move == "BI") {
         BI(sides[0]);
+    }
+    else if (move == "U") {
+        U(sides[0]);
+    }
+    else if (move == "D") {
+        D(sides[0]);
+    }
+    else if (move == "R") {
+        R(sides[0]);
     }}
