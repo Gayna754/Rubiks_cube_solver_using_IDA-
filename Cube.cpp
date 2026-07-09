@@ -889,3 +889,12 @@ void Cube::doMove(std::string move) {
         B(sides[0]);
     }
 }
+
+void Cube::undoMove(std::string move) {
+
+    if (move == "UI") {
+        U(sides[0]);
+    }
+    else if (move == "DI") {
+        D(sides[0]);
+    }}
