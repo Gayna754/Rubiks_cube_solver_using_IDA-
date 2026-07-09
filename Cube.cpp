@@ -928,4 +928,12 @@ else if (move == "L") {
     }
     else if (move == "B") {
         BI(sides[0]);
+    }
+    else if (move == "U2") {
+        U(sides[0]);
+        U(sides[0]);
+    }
+    else if (move == "D2") {
+        D(sides[0]);
+        D(sides[0]);
     }}
