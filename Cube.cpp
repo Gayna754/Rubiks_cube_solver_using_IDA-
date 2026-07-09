@@ -859,4 +859,12 @@ void Cube::doMove(std::string move) {
     }
     else if (move == "F") {
         F(sides[0]);
+    }
+    else if (move == "B") {
+        B(sides[0]);
+    }
+
+    else if (move == "U2") {
+        U(sides[0]);
+        U(sides[0]);
     }}
