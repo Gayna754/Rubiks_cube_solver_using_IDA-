@@ -867,4 +867,25 @@ void Cube::doMove(std::string move) {
     else if (move == "U2") {
         U(sides[0]);
         U(sides[0]);
-    }}
+    }
+    else if (move == "D2") {
+        D(sides[0]);
+        D(sides[0]);
+    }
+    else if (move == "R2") {
+        R(sides[0]);
+        R(sides[0]);
+    }
+    else if (move == "L2") {
+        L(sides[0]);
+        L(sides[0]);
+    }
+    else if (move == "F2") {
+        F(sides[0]);
+        F(sides[0]);
+    }
+    else if (move == "B2") {
+        B(sides[0]);
+        B(sides[0]);
+    }
+}
