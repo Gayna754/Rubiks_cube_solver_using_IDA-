@@ -897,4 +897,13 @@ void Cube::undoMove(std::string move) {
     }
     else if (move == "DI") {
         D(sides[0]);
+    }
+ else if (move == "RI") {
+        R(sides[0]);
+    }
+    else if (move == "LI") {
+        L(sides[0]);
+    }
+    else if (move == "FI") {
+        F(sides[0]);
     }}
