@@ -919,4 +919,13 @@ void Cube::undoMove(std::string move) {
     }
     else if (move == "R") {
         RI(sides[0]);
+    }
+else if (move == "L") {
+        LI(sides[0]);
+    }
+    else if (move == "F") {
+        FI(sides[0]);
+    }
+    else if (move == "B") {
+        BI(sides[0]);
     }}
