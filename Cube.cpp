@@ -824,3 +824,15 @@ std::random_device rd;
 
     std::cout << "Scrambled!\n";
 }
+
+void Cube::doMove(std::string move) {
+
+    if (move == "UI") {
+        UI(sides[0]);
+    }
+    else if (move == "DI") {
+        DI(sides[0]);
+    }
+    else if (move == "RI") {
+        RI(sides[0]);
+    }}
