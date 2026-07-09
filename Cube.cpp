@@ -948,4 +948,10 @@ else if (move == "R2") {
     else if (move == "F2") {
         F(sides[0]);
         F(sides[0]);
-    }}
+    }
+else if (move == "B2") {
+        B(sides[0]);
+        B(sides[0]);
+    }
+}
+
