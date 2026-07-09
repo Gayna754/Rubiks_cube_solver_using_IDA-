@@ -955,3 +955,47 @@ else if (move == "B2") {
     }
 }
 
+std::string Cube::inverse(std::string move) {
+
+    if (move == "UI") {
+        return "U";
+    }
+    else if (move == "DI") {
+        return "D";
+    }
+    else if (move == "RI") {
+        return "R";
+    }
+    else if (move == "LI") {
+        return "L";
+    }
+    else if (move == "FI") {
+        return "F";
+    }
+    else if (move == "BI") {
+        return "B";
+    }
+
+    else if (move == "U") {
+        return "UI";
+    }
+    else if (move == "D") {
+        return "DI";
+    }
+    else if (move == "R") {
+        return "RI";
+    }
+    else if (move == "L") {
+        return "LI";
+    }
+    else if (move == "F") {
+        return "FI";
+    }
+    else if (move == "B") {
+        return "BI";
+    }
+    else {
+        return "";
+    }
+}
+
