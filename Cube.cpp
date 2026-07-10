@@ -999,3 +999,22 @@ std::string Cube::inverse(std::string move) {
     }
 }
 
+std::pair<int, int> Cube::findFinalLocationCorner(CornerPiece &cornerPiece) {
+
+    Cube solvedCube;
+    solvedCube.generateNewSolvedCube();
+
+    for (int j = 0; j < solvedCube.sides.size(); j++) {
+        for (int i = 0; i < sides[j].cornerPieces.size(); i++) {
+
+            if (solvedCube.sides[j].cornerPieces[i].colour.colourName == cornerPiece.colour.colourName
+                && solvedCube.sides[j].cornerPieces[i].topColour.colourName == cornerPiece.topColour.colourName
+                && solvedCube.sides[j].cornerPieces[i].sideColour.colourName == cornerPiece.sideColour.colourName) {
+
+                return std::make_pair(j, i); //side, piece coordinate
+
+            }
+        }
+    }
+}
+
