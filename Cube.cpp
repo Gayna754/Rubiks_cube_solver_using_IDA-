@@ -627,10 +627,10 @@ void Cube::makeYellowCross() {
         RI(sides[3]);
         UI(sides[3]);
         FI(sides[3]);
-        
+
         UI(sides[3]);
         UI(sides[3]);
-    
+
         F(sides[3]);
         R(sides[3]);
         U(sides[3]);
@@ -638,7 +638,7 @@ void Cube::makeYellowCross() {
         UI(sides[3]);
         FI(sides[3]);
 
-         F(sides[3]);
+        F(sides[3]);
         R(sides[3]);
         U(sides[3]);
         RI(sides[3]);
@@ -773,7 +773,7 @@ void Cube::scramble(int numOfScrambleMoves) {
 
     int arraySize = sizeof(possibleMoves) / sizeof(possibleMoves[0]);
 
-std::random_device rd;
+    std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, arraySize - 1);
 
@@ -783,19 +783,19 @@ std::random_device rd;
         if (possibleMoves[randomIndex] == "UI") {
             UI(sides[0]);
         }
-     else if (possibleMoves[randomIndex] == "DI") {
+        else if (possibleMoves[randomIndex] == "DI") {
             DI(sides[0]);
         }
         else if (possibleMoves[randomIndex] == "RI") {
             RI(sides[0]);
         }
-     else if (possibleMoves[randomIndex] == "LI") {
+        else if (possibleMoves[randomIndex] == "LI") {
             LI(sides[0]);
         }
         else if (possibleMoves[randomIndex] == "FI") {
             FI(sides[0]);
         }
-    else if (possibleMoves[randomIndex] == "BI") {
+        else if (possibleMoves[randomIndex] == "BI") {
             BI(sides[0]);
         }
 
@@ -808,7 +808,7 @@ std::random_device rd;
         else if (possibleMoves[randomIndex] == "R") {
             R(sides[0]);
         }
-    else if (possibleMoves[randomIndex] == "L") {
+        else if (possibleMoves[randomIndex] == "L") {
             L(sides[0]);
         }
         else if (possibleMoves[randomIndex] == "F") {
@@ -845,6 +845,7 @@ void Cube::doMove(std::string move) {
     else if (move == "BI") {
         BI(sides[0]);
     }
+
     else if (move == "U") {
         U(sides[0]);
     }
@@ -898,7 +899,7 @@ void Cube::undoMove(std::string move) {
     else if (move == "DI") {
         D(sides[0]);
     }
- else if (move == "RI") {
+    else if (move == "RI") {
         R(sides[0]);
     }
     else if (move == "LI") {
@@ -920,7 +921,7 @@ void Cube::undoMove(std::string move) {
     else if (move == "R") {
         RI(sides[0]);
     }
-else if (move == "L") {
+    else if (move == "L") {
         LI(sides[0]);
     }
     else if (move == "F") {
@@ -929,6 +930,7 @@ else if (move == "L") {
     else if (move == "B") {
         BI(sides[0]);
     }
+
     else if (move == "U2") {
         U(sides[0]);
         U(sides[0]);
@@ -937,7 +939,7 @@ else if (move == "L") {
         D(sides[0]);
         D(sides[0]);
     }
-else if (move == "R2") {
+    else if (move == "R2") {
         R(sides[0]);
         R(sides[0]);
     }
@@ -949,7 +951,7 @@ else if (move == "R2") {
         F(sides[0]);
         F(sides[0]);
     }
-else if (move == "B2") {
+    else if (move == "B2") {
         B(sides[0]);
         B(sides[0]);
     }
@@ -1064,6 +1066,284 @@ int* Cube::findCoordinate(int sideIndex, int pieceIndex, int isCornerOrEdge) {
         else if (pieceIndex == 3 and isCornerOrEdge == 1) {
             return sideOneCoordinates[3];
         }
+
+    }
+    else if(sideIndex == 1) {
+
+        if (pieceIndex == 0 and isCornerOrEdge == 0) { // corner
+            return sideTwoCoordinates[0];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 0) {
+            return sideTwoCoordinates[2];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 0) {
+            return sideTwoCoordinates[8];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 0) {
+            return sideTwoCoordinates[6];
+        }
+        else if (pieceIndex == 0 and isCornerOrEdge == 1) {
+            return sideTwoCoordinates[1];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 1) {
+            return sideTwoCoordinates[5];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 1) {
+            return sideTwoCoordinates[7];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 1) {
+            return sideTwoCoordinates[3];
+        }
+
+    }
+    else if(sideIndex == 2) {
+
+        if (pieceIndex == 0 and isCornerOrEdge == 0) { // corner
+            return sideThreeCoordinates[0];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 0) {
+            return sideThreeCoordinates[2];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 0) {
+            return sideThreeCoordinates[8];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 0) {
+            return sideThreeCoordinates[6];
+        }
+        else if (pieceIndex == 0 and isCornerOrEdge == 1) {
+            return sideThreeCoordinates[1];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 1) {
+            return sideThreeCoordinates[5];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 1) {
+            return sideThreeCoordinates[7];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 1) {
+            return sideThreeCoordinates[3];
+        }
+
+    }
+    else if(sideIndex == 3) {
+
+        if (pieceIndex == 0 and isCornerOrEdge == 0) { // corner
+            return sideFourCoordinates[0];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 0) {
+            return sideFourCoordinates[2];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 0) {
+            return sideFourCoordinates[8];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 0) {
+            return sideFourCoordinates[6];
+        }
+        else if (pieceIndex == 0 and isCornerOrEdge == 1) {
+            return sideFourCoordinates[1];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 1) {
+            return sideFourCoordinates[5];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 1) {
+            return sideFourCoordinates[7];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 1) {
+            return sideFourCoordinates[3];
+        }
+
+    }
+    else if(sideIndex == 4) {
+
+        if (pieceIndex == 0 and isCornerOrEdge == 0) { // corner
+            return sideFiveCoordinates[0];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 0) {
+            return sideFiveCoordinates[2];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 0) {
+            return sideFiveCoordinates[8];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 0) {
+            return sideFiveCoordinates[6];
+        }
+        else if (pieceIndex == 0 and isCornerOrEdge == 1) {
+            return sideFiveCoordinates[1];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 1) {
+            return sideFiveCoordinates[5];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 1) {
+            return sideFiveCoordinates[7];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 1) {
+            return sideFiveCoordinates[3];
+        }
+
+    }
+    else if(sideIndex == 5) {
+
+        if (pieceIndex == 0 and isCornerOrEdge == 0) { // corner
+            return sideSixCoordinates[0];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 0) {
+            return sideSixCoordinates[2];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 0) {
+            return sideSixCoordinates[8];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 0) {
+            return sideSixCoordinates[6];
+        }
+        else if (pieceIndex == 0 and isCornerOrEdge == 1) {
+            return sideSixCoordinates[1];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 1) {
+            return sideSixCoordinates[5];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 1) {
+            return sideSixCoordinates[7];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 1) {
+            return sideSixCoordinates[3];
+        }
+    }
+}
+
+std::string Cube::toString(Cube cubeToBeConvertedToString) {
+
+    std::string s = "";
+
+    for (auto side: cubeToBeConvertedToString.sides) {
+        for (auto cornerPiece: side.cornerPieces) {
+            s += cornerPiece.colour.colourName;
+        }
+
+        for (auto edgePiece: side.edgePieces) {
+            s += edgePiece.colour.colourName;
+        }
     }
 
+    return s;
+}
 
+int Cube::calculateHeuristicValueOfPiece(int currSide, int currPiece, int finalSide, int finalPiece, int isCornerOrEdge) {
+
+    int* currCoordinate = findCoordinate(currSide, currPiece, isCornerOrEdge);
+    int* finalCoordinate = findCoordinate(finalSide, finalPiece, isCornerOrEdge);
+
+
+
+    int heuristicValue = abs(currCoordinate[0] - finalCoordinate[0]) +
+                   abs(currCoordinate[1] - finalCoordinate[1]) +
+                   abs(currCoordinate[2] - finalCoordinate[2]);
+
+    return heuristicValue;
+}
+
+int Cube::findHeuristicValue() {
+
+    Cube solvedCube;
+    solvedCube.generateNewSolvedCube();
+
+    int heuristicValue = 0;
+
+    for (int j = 0; j < sides.size(); j++) {
+
+        for (int i = 0; i < sides[j].cornerPieces.size(); i++) {
+
+            std::pair <int, int> finalLocation = findFinalLocationCorner(sides[j].cornerPieces[i]);
+
+            heuristicValue += calculateHeuristicValueOfPiece(j, i, finalLocation.first, finalLocation.second, 0);
+        }
+
+        for (int i = 0; i < sides[j].edgePieces.size(); i++) {
+
+            std::pair <int, int> finalLocation = findFinalLocationEdge(sides[j].edgePieces[i]);
+
+            heuristicValue += calculateHeuristicValueOfPiece(j, i, finalLocation.first, finalLocation.second, 1);
+        }
+
+    }
+    return heuristicValue;
+}
+
+bool Cube::DFS(int g, int depthLimit, int& outDepth, std::vector<std::string>& solution, std::string lastMove) {
+
+    std::string possibleMoves[] = {"U", "UI", "D", "DI", "F", "FI", "B", "BI", "R", "RI", "L", "LI", "U2", "L2", "R2", "B2", "F2", "D2"};
+
+    int arraySize = sizeof(possibleMoves) / sizeof(possibleMoves[0]);
+
+    int h = findHeuristicValue();
+    int f = g + h;
+
+    std::string currentState = toString(*this); // Get current state representation
+
+    if (visitedStates.find(currentState) != visitedStates.end()) {
+        return false;
+    }
+
+    visitedStates.insert(currentState);
+
+    if (f > depthLimit) {
+        return false;
+    }
+
+    if (h == 0) {
+        return true;
+    }
+
+    for (int i = 0; i < arraySize; i++) {
+
+        if (possibleMoves[i] == lastMove || (lastMove.size() == 2 && possibleMoves[i] == lastMove.substr(0, 1))) {
+            continue;
+        }
+
+        doMove(possibleMoves[i]);
+
+        std::cout << "IDA* Algorithm Thinking: " << possibleMoves[i] << "\n";
+
+        solution.push_back(possibleMoves[i]);
+
+        if (DFS(g + 10, depthLimit, outDepth, solution, possibleMoves[i])) {
+            return true;
+        }
+
+        undoMove(possibleMoves[i]);
+        solution.pop_back();
+    }
+
+    outDepth = f;
+    return false;
+}
+
+
+bool Cube::IDAStar(int depthLimit) {
+
+    visitedStates.clear();
+
+    int initialCost = findHeuristicValue();
+    int minCost = initialCost;
+
+    while (true) {
+        int nextCostLimit = INT_MAX;
+        int outDepth;
+
+        std::string currentState = toString(*this);
+
+        if (visitedStates.find(currentState) != visitedStates.end()) {
+            return false;
+        }
+
+        if (DFS(0, depthLimit, outDepth, solution, "")) {
+            std::cout << "Solved!\n";
+            return true;
+        }
+
+        if (outDepth == INT_MAX) {
+            return false;
+        }
+
+        nextCostLimit = outDepth;
+        depthLimit = nextCostLimit;
+    }
+}
