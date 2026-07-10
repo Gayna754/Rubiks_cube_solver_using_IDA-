@@ -1018,3 +1018,22 @@ std::pair<int, int> Cube::findFinalLocationCorner(CornerPiece &cornerPiece) {
     }
 }
 
+std::pair<int, int> Cube::findFinalLocationEdge(EdgePiece &edgePiece) {
+
+    Cube solvedCube;
+    solvedCube.generateNewSolvedCube();
+
+    for (int j = 0; j < solvedCube.sides.size(); j++) {
+        for (int i = 0; i < sides[j].edgePieces.size(); i++) {
+
+            if (solvedCube.sides[j].edgePieces[i].colour.colourName == edgePiece.colour.colourName
+                && solvedCube.sides[j].edgePieces[i].otherColour.colourName == edgePiece.otherColour.colourName) {
+
+                return std::make_pair(j, i); //side, piece coordinate
+
+            }
+        }
+    }
+}
+
+
