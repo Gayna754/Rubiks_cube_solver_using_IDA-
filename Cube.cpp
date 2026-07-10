@@ -1036,4 +1036,34 @@ std::pair<int, int> Cube::findFinalLocationEdge(EdgePiece &edgePiece) {
     }
 }
 
+int* Cube::findCoordinate(int sideIndex, int pieceIndex, int isCornerOrEdge) {
+
+    if (sideIndex == 0) {
+
+        if (pieceIndex == 0 and isCornerOrEdge == 0) { // corner
+            return sideOneCoordinates[0];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 0) {
+            return sideOneCoordinates[2];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 0) {
+            return sideOneCoordinates[8];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 0) {
+            return sideOneCoordinates[6];
+        }
+        else if (pieceIndex == 0 and isCornerOrEdge == 1) {
+            return sideOneCoordinates[1];
+        }
+        else if (pieceIndex == 1 and isCornerOrEdge == 1) {
+            return sideOneCoordinates[5];
+        }
+        else if (pieceIndex == 2 and isCornerOrEdge == 1) {
+            return sideOneCoordinates[7];
+        }
+        else if (pieceIndex == 3 and isCornerOrEdge == 1) {
+            return sideOneCoordinates[3];
+        }
+    }
+
 
