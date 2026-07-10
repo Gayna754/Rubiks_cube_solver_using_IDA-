@@ -1279,7 +1279,7 @@ bool Cube::DFS(int g, int depthLimit, int& outDepth, std::vector<std::string>& s
     std::string currentState = toString(*this); // Get current state representation
 
     if (visitedStates.find(currentState) != visitedStates.end()) {
-        return false;
+        return true;
     }
 
     visitedStates.insert(currentState);
