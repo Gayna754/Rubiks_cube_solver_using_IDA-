@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 project(Rubiks_Cube)
 
-set(CMAKE_CXX_STANDARD 18)
+set(CMAKE_CXX_STANDARD 19)
 
 find_package(glfw3 REQUIRED)
 
