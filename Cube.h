@@ -73,4 +73,4 @@ public:
 };
 
 
-#endif //RUBIKS_CUBE_CUBE_H
+#endif 
