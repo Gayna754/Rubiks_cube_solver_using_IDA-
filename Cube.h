@@ -29,9 +29,9 @@ public:
     bool secondLayerSolved();
     bool isYellowCross();
     void makeYellowCross();
-    void solveFinalLayer();
+   
 
-    void scramble(int numOfScrambleMoves = 16);
+    void scramble(int numOfScrambleMoves = 20);
 
     std::string inverse(std::string move);
 
@@ -73,4 +73,4 @@ public:
 };
 
 
-#endif 
+#endif //RUBIKS_CUBE_CUBE_H
