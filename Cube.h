@@ -31,7 +31,7 @@ public:
     void makeYellowCross();
     void solveFinalLayer();
 
-    void scramble(int numOfScrambleMoves = 20);
+    void scramble(int numOfScrambleMoves = 19);
 
     std::string inverse(std::string move);
 
