@@ -28,7 +28,7 @@ public:
     bool whiteLayerSolved();
     bool secondLayerSolved();
     bool isYellowCross();
-    
+    void makeYellowCross();
     void solveFinalLayer();
 
     void scramble(int numOfScrambleMoves = 20);
