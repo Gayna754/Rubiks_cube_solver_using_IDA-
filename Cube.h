@@ -47,7 +47,7 @@ public:
     void FI(Side &sideFacing);
     void DI(Side &sideFacing);
     void LI(Side &sideFacing);
-    void BI(Side &sideFacing);
+    
 
     int indexOfSide(Side &sideToBeFound);
     int indexOfRight(Side &sideToBeFound);
