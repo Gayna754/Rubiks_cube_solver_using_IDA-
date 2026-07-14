@@ -1203,7 +1203,7 @@ int* Cube::findCoordinate(int sideIndex, int pieceIndex, int isCornerOrEdge) {
         else if (pieceIndex == 2 and isCornerOrEdge == 1) {
             return sideSixCoordinates[7];
         }
-        else if (pieceIndex == 7 and isCornerOrEdge == 1) {
+        else if (pieceIndex == 8 and isCornerOrEdge == 1) {
             return sideSixCoordinates[3];
         }
     }
