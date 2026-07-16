@@ -1249,7 +1249,7 @@ int Cube::findHeuristicValue() {
 
     for (int j = 0; j < sides.size(); j++) {
 
-        for (int i = 3; i < sides[j].cornerPieces.size(); i++) {
+        for (int i = 0; i < sides[j].cornerPieces.size(); i++) {
 
             std::pair <int, int> finalLocation = findFinalLocationCorner(sides[j].cornerPieces[i]);
 
