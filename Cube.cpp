@@ -1247,7 +1247,7 @@ int Cube::findHeuristicValue() {
 
     int heuristicValue = 0;
 
-    for (int j = 4; j < sides.size(); j++) {
+    for (int j = 5; j < sides.size(); j++) {
 
         for (int i = 0; i < sides[j].cornerPieces.size(); i++) {
 
